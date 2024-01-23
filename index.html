@@ -1,53 +1,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Netflix</title>
-    <link rel="stylesheet" href="home_page.css"/>
-     <script src="script2.js"></script>
-  </head>
-  <body>
-    <!-- navbar -->
-    <div class="nav">
-      <div class="nav__left">
-        <a href="index.html">
-        <img class="nav_logo" src="logo.png" alt=""></a>
-      </div>
-      <div class="nav__right">
-        <img src="avatar.png" class="nav_avatar" alt="">
-      </div>
-    </div>
 
-    <!-- banner -->
-    <header id="banner">
-      <div id="banner__contents">
-        <h1 id="banner__title"></h1>
-        <div id="banner__buttons">
-        <button id="banner__button">Play</button>
-        <button id="banner__button">My List</button>
-      </div>
-      <p id="banner__description"></p>
-      </div>
-      <div id="banner__fadeBottom"></div>
-    </header>
+<head>
+     <link rel="stylesheet" href="weather_app/weather.css">
+</head>
 
-    <!-- row -->
-    <div id="headrow">
-      <div class="row">
-        <h2 class="row__title"></h2>
-        <div class="row__posters"> </div>
-      </div>
-    </div>
+<body>
+  <div class="container">
+    <section class="main">
+      <section class="inputs">
+        <input type="text" placeholder="Enter Your City Name..." id="cityinput">
+        <input type="submit" value="Submit" id="add">
+        <button placeholder="submit" id="add"></button>
+      </section>
 
-    <script>
-      window.addEventListener("scroll",function(){
+     <section class="display">
+        <div class="wrapper">
+          <h2 id="cityoutput"></h2>
+          <p id="description"></p>
+          <p id="temp"></p>
+          <p id="wind"></p>
+        </div>
+      </section>
+    </section>
 
-        var nav = document.querySelector(".nav");
-        nav.classList.toggle("active", window.scrollY > 0);
-      }) 
-    </script> 
-  </body>
+  </div>
+
+  <script src="weather_app/weather.js"></script>
+</body>
+
 </html>
